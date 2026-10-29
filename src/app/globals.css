@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#fdfdfd] text-zinc-900 antialiased selection:bg-amber-100 selection:text-amber-900;
+  }
+}
+
+/* Custom Reading View Styling */
+.reader-prose {
+  @apply leading-relaxed text-zinc-800;
+}
+
+.reader-prose p {
+  @apply my-4 leading-relaxed;
+}
+
+.reader-prose h1, .reader-prose h2, .reader-prose h3, .reader-prose h4 {
+  @apply font-bold text-zinc-900 mt-6 mb-3;
+}
+
+.reader-prose h1 { @apply text-2xl; }
+.reader-prose h2 { @apply text-xl; }
+.reader-prose h3 { @apply text-lg; }
+
+.reader-prose blockquote {
+  @apply border-l-4 border-amber-600/40 pl-4 my-4 italic text-zinc-600 bg-amber-500/5 py-1 rounded-r;
+}
+
+.reader-prose pre {
+  @apply bg-zinc-900 text-zinc-100 p-4 rounded-lg overflow-x-auto my-4 text-sm font-mono;
+}
+
+.reader-prose code {
+  @apply bg-zinc-100 dark:bg-zinc-800 px-1.5 py-0.5 rounded text-sm font-mono text-amber-800 dark:text-amber-300;
+}
+
+.reader-prose pre code {
+  @apply bg-transparent p-0 text-zinc-100;
+}
+
+.reader-prose ul {
+  @apply list-disc list-inside my-4 space-y-1;
+}
+
+.reader-prose ol {
+  @apply list-decimal list-inside my-4 space-y-1;
+}
+
+.reader-prose img {
+  @apply max-w-full h-auto rounded-lg my-6 shadow-sm border border-zinc-200 dark:border-zinc-700;
+}
+
+.reader-prose a {
+  @apply text-amber-700 underline decoration-amber-300 hover:decoration-amber-700 underline-offset-2;
+}
+
+.reader-prose hr {
+  @apply my-8 border-zinc-200 dark:border-zinc-800;
+}
+
+/* Sepia Theme */
+.theme-sepia {
+  background-color: #fbf0d9 !important;
+  color: #433422 !important;
+}
+
+.theme-sepia .reader-card {
+  background-color: #f5e7c8 !important;
+  border-color: #e5d2ac !important;
+}
+
+.theme-sepia .reader-prose {
+  color: #3b2e1e !important;
+}
+
+.theme-sepia .reader-prose a {
+  color: #8c4c14 !important;
+}
+
+/* Dark Theme */
+.theme-dark {
+  background-color: #121214 !important;
+  color: #e4e4e7 !important;
+}
+
+.theme-dark .reader-card {
+  background-color: #1a1a1e !important;
+  border-color: #27272a !important;
+}
+
+.theme-dark .reader-prose {
+  color: #d4d4d8 !important;
+}
+
+.theme-dark .reader-prose h1,
+.theme-dark .reader-prose h2,
+.theme-dark .reader-prose h3 {
+  color: #fafafa !important;
+}
+
+.theme-dark .reader-prose a {
+  color: #fbbf24 !important;
+}
+
+.theme-dark .reader-prose blockquote {
+  border-color: #f59e0b !important;
+  background-color: rgba(245, 158, 11, 0.05) !important;
+  color: #a1a1aa !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 160, 160, 0.25);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 160, 160, 0.45);
+}
